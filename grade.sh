@@ -2,7 +2,7 @@
 # Clone the repository of the student submission to a well-known directory name
 rm -rf student-submission
 git clone $1 student-submission
-GRADE = "0"
+GRADE="0"
 cd student-submission
 # Check that the student code has the correct file submitted.
 if [ -f "ListExamples.java" ]
@@ -15,6 +15,7 @@ else
 fi
 # Somehow get the student code and your test .java file into the same directory
 mkdir testdir
+cp -r ../lib testdir/
 cp ../TestListExamples.java testdir/
 cp ListExamples.java testdir/
 cd testdir
